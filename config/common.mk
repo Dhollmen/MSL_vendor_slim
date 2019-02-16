@@ -128,6 +128,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
     media.sf.omx-plugin=libffmpeg_omx.so \
     media.sf.extractor-plugin=libffmpeg_extractor.so
 
+# Default sounds    
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.config.alarm_alert=Tourmaline.ogg \
+    ro.config.notification_sound=Omicron.ogg \
+    ro.config.ringtone=Strontium.ogg
+
 # easy way to extend to add more packages
 -include vendor/extra/product.mk
 
