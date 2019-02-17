@@ -149,16 +149,6 @@ SLIM_BUILD_TYPE := Dhollmen
 SLIM_POSTFIX := -$(shell date +"%Y%m%d")
 PLATFORM_VERSION_CODENAME := $(SLIM_BUILD_TYPE)
 
-# SlimIRC
-# export INCLUDE_SLIMIRC=1 for unofficial builds
-ifneq ($(filter WEEKLY OFFICIAL,$(SLIM_BUILD_TYPE)),)
-    INCLUDE_SLIMIRC = 1
-endif
-
-ifneq ($(INCLUDE_SLIMIRC),)
-    PRODUCT_PACKAGES += SlimIRC
-endif
-
 # Set all versions
 SLIM_VERSION := Slim-$(PRODUCT_VERSION_MAJOR)-$(SLIM_BUILD_TYPE)$(SLIM_POSTFIX)
 SLIM_MOD_VERSION := Slim-$(SLIM_BUILD)-$(PRODUCT_VERSION_MAJOR)-$(SLIM_BUILD_TYPE)$(SLIM_POSTFIX)
@@ -171,4 +161,3 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.slim.buildtype=$(SLIM_BUILD_TYPE)
 
 EXTENDED_POST_PROCESS_PROPS := vendor/slim/tools/slim_process_props.py
-
