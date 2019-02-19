@@ -58,8 +58,8 @@ PRODUCT_COPY_FILES += \
 
 # An other files
 PRODUCT_COPY_FILES += \
-    $(PREBUILT)/xbin/sysro:system/xbin/sysro \
-    $(PREBUILT)/xbin/sysrw:system/xbin/sysrw
+    vendor/slim/prebuilt/common/xbin/sysro:system/xbin/sysro \
+    vendor/slim/prebuilt/common/xbin/sysrw:system/xbin/sysrw
 
 # Required packages
 PRODUCT_PACKAGES += \
@@ -87,8 +87,6 @@ PRODUCT_PACKAGES += \
     SlimLauncher \
     LatinIME \
     BluetoothExt
-
-#    SlimFileManager removed until updated
 
 ## Slim Framework
 include frameworks/opt/slim/slim_framework.mk
