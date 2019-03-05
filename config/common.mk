@@ -86,7 +86,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     SlimLauncher \
     LatinIME \
-    BluetoothExt
+    BluetoothExt \
+    Calculator
 
 ## Slim Framework
 include frameworks/opt/slim/slim_framework.mk
