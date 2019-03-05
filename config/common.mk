@@ -89,6 +89,13 @@ PRODUCT_PACKAGES += \
     BluetoothExt \
     Calculator
 
+# Chromium
+PRODUCT_PACKAGES += \
+    Chromium \
+    libchrome \
+    libchromium_android_linker \
+    libcrashpad_handler
+
 ## Slim Framework
 include frameworks/opt/slim/slim_framework.mk
 
