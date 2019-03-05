@@ -63,7 +63,6 @@ PRODUCT_COPY_FILES += \
 
 # Required packages
 PRODUCT_PACKAGES += \
-    Development \
     SpareParts \
     su
 
