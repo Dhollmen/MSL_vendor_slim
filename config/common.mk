@@ -89,6 +89,7 @@ PRODUCT_PACKAGES += \
     Calculator \
     FMRadio \
     Music \
+    SoundRecorder\
     Wallpapers
 
 # Chromium
