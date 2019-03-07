@@ -88,7 +88,8 @@ PRODUCT_PACKAGES += \
     BluetoothExt \
     Calculator \
     FMRadio \
-    Music
+    Music \
+    Wallpapers
 
 # Chromium
 PRODUCT_PACKAGES += \
