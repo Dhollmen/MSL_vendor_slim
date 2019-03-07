@@ -86,7 +86,8 @@ PRODUCT_PACKAGES += \
     SlimLauncher \
     LatinIME \
     BluetoothExt \
-    Calculator
+    Calculator \
+    FMRadio
 
 # Chromium
 PRODUCT_PACKAGES += \
