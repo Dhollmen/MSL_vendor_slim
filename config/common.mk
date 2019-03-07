@@ -87,7 +87,8 @@ PRODUCT_PACKAGES += \
     LatinIME \
     BluetoothExt \
     Calculator \
-    FMRadio
+    FMRadio \
+    Music
 
 # Chromium
 PRODUCT_PACKAGES += \
