@@ -87,7 +87,6 @@ PRODUCT_PACKAGES += \
     LatinIME \
     BluetoothExt \
     Calculator \
-    FMRadio \
     Music \
     SoundRecorder\
     Wallpapers
