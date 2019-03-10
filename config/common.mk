@@ -83,13 +83,13 @@ PRODUCT_PACKAGES += \
 
 # Extra Optional packages
 PRODUCT_PACKAGES += \
-    SlimLauncher \
     LatinIME \
     BluetoothExt \
     Calculator \
     Music \
     SoundRecorder\
-    Wallpapers
+    Wallpapers \
+    PLauncher
 
 # Chromium
 PRODUCT_PACKAGES += \
