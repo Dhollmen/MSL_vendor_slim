@@ -89,7 +89,8 @@ PRODUCT_PACKAGES += \
     Music \
     SoundRecorder\
     Wallpapers \
-    PLauncher
+    PLauncher \
+    Amaze
 
 # Chromium
 PRODUCT_PACKAGES += \
