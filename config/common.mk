@@ -90,7 +90,8 @@ PRODUCT_PACKAGES += \
     SoundRecorder\
     Wallpapers \
     PLauncher \
-    Amaze
+    Amaze \
+    NewPipeYT
 
 # Chromium
 PRODUCT_PACKAGES += \
