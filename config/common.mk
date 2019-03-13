@@ -95,10 +95,12 @@ PRODUCT_PACKAGES += \
 
 # Chromium
 PRODUCT_PACKAGES += \
-    Chromium \
-    libchrome \
-    libchromium_android_linker \
-    libcrashpad_handler
+    Chromium 
+
+PRODUCT_COPY_FILES += \
+    vendor/slim/proprietary/Chromium/lib/arm/libchrome.so:system/app/Chromium/lib/arm/libchrome.so \
+    vendor/slim/proprietary/Chromium/lib/arm/libchromium_android_linker.so:system/app/Chromium/lib/arm/libchromium_android_linker.so \
+    vendor/slim/proprietary/Chromium/lib/arm/libcrashpad_handler.so:system/app/Chromium/lib/arm/libcrashpad_handler.so
 
 ## Slim Framework
 include frameworks/opt/slim/slim_framework.mk
