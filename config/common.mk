@@ -81,6 +81,13 @@ PRODUCT_PACKAGES += \
     libswdap \
     libdlbdapstorage
 
+# Media effects
+PRODUCT_PACKAGES += \
+    com.google.android.media.effects
+
+PRODUCT_COPY_FILES += \
+    vendor/slim/proprietary/Media/com.google.android.media.effects.xml:system/etc/permissions/com.google.android.media.effects.xml
+    
 # CM Hardware Abstraction Framework
 PRODUCT_PACKAGES += \
     org.cyanogenmod.hardware \
