@@ -76,6 +76,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     AudioFX
 
+# Dolby
+PRODUCT_PACKAGES += \
+    libswdap \
+    libdlbdapstorage
+
 # CM Hardware Abstraction Framework
 PRODUCT_PACKAGES += \
     org.cyanogenmod.hardware \
