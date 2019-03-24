@@ -1,0 +1,32 @@
+#!/system/bin/sh
+# Copyright 2014-2019 Tuxafgmur - Dhollmen
+
+rm -fr /data/bugreports
+rm -f  /data/local/tmp/*
+rm -f  /data/tombstones/*
+rm -f  /data/system/uiderrors.txt
+rm -f  /data/system/dropbox/*
+
+cd /data/dalvik-cache/arm
+if [ $? -eq 0 ]; then
+    for q in *; do
+        a=$(echo $q|cut -d'@' -f1)
+        b=$(echo $q|cut -d'@' -f2)
+        c=$(echo $q|cut -d'@' -f3)
+        case $c in
+            boot.art)
+            ;;
+            boot.oat)
+            ;;
+            *)	FILE="/$a/$b/$c"
+                [ -e $FILE ] || rm $q
+            ;;
+        esac
+    done
+fi
+for q in system data cache; do
+    mount | grep /$q | grep -q ext4
+    if [ $? -eq 0 ]; then
+        fstrim /$q
+    fi
+done

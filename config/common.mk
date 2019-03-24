@@ -28,38 +28,30 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_COPY_FILES += \
     vendor/slim/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
     vendor/slim/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions \
-    vendor/slim/prebuilt/common/bin/50-slim.sh:system/addon.d/50-slim.sh
+    vendor/slim/prebuilt/common/bin/50-rom.sh:system/addon.d/50-rom.sh
 
 # Signature compatibility validation
 PRODUCT_COPY_FILES += \
     vendor/slim/prebuilt/common/bin/otasigcheck.sh:install/bin/otasigcheck.sh
 
-# SLIM-specific init file
+# Rom's additional init file
 PRODUCT_COPY_FILES += \
-    vendor/slim/prebuilt/common/etc/init.local.rc:root/init.slim.rc
-
-# SELinux filesystem labels
-PRODUCT_COPY_FILES += \
-    vendor/slim/prebuilt/common/etc/init.d/50selinuxrelabel:system/etc/init.d/50selinuxrelabel
+    vendor/slim/prebuilt/common/etc/init.rom.rc:root/init.rom.rc
 
 # Enable SIP+VoIP on all targets
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
 
-# Don't export PS1 in /system/etc/mkshrc.
+# Mkshrc.
 PRODUCT_COPY_FILES += \
-    vendor/slim/prebuilt/common/etc/mkshrc:system/etc/mkshrc \
-    vendor/slim/prebuilt/common/etc/sysctl.conf:system/etc/sysctl.conf
-
-PRODUCT_COPY_FILES += \
-    vendor/slim/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner \
-    vendor/slim/prebuilt/common/etc/init.d/90userinit:system/etc/init.d/90userinit \
-    vendor/slim/prebuilt/common/bin/sysinit:system/bin/sysinit
+    vendor/slim/prebuilt/common/etc/mkshrc:system/etc/mkshrc
 
 # An other files
 PRODUCT_COPY_FILES += \
+    vendor/slim/prebuilt/common/xbin/clean:system/xbin/clean \
     vendor/slim/prebuilt/common/xbin/sysro:system/xbin/sysro \
-    vendor/slim/prebuilt/common/xbin/sysrw:system/xbin/sysrw
+    vendor/slim/prebuilt/common/xbin/sysrw:system/xbin/sysrw \
+    vendor/slim/prebuilt/common/xbin/wget:system/xbin/wget \
 
 # Required packages
 PRODUCT_PACKAGES += \
