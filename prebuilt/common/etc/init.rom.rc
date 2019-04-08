@@ -3,27 +3,11 @@
 import /init.superuser.rc
 
 on init
-    chmod 0755 /sys/fs/cgroup
-    mkdir /sys/fs/cgroup/bfqio 0755 root system
-    mount cgroup none /sys/fs/cgroup/bfqio bfqio
-    chown root system /sys/fs/cgroup/bfqio/tasks
-    chmod 0664 /sys/fs/cgroup/bfqio/tasks
-    chmod 0220 /sys/fs/cgroup/bfqio/cgroup.event_control
-
-    mkdir /sys/fs/cgroup/bfqio/rt-display 0755 root system
-    write /sys/fs/cgroup/bfqio/rt-display/bfqio.ioprio_class 1
-    write /sys/fs/cgroup/bfqio/rt-display/bfqio.ioprio 7
-    chown system system /sys/fs/cgroup/bfqio/rt-display/tasks
-    chmod 0664 /sys/fs/cgroup/bfqio/rt-display/tasks
-    chmod 0220 /sys/fs/cgroup/bfqio/rt-display/cgroup.event_control
+	mkdir /mnt/mount1 0755 root system
+	mkdir /mnt/mount2 0755 root system
 
 on post-fs-data
     mkdir /data/.ssh 0750 root shell
-
-on boot
-    chown system system /sys/block/mmcblk0/queue/scheduler
-    chmod 0664 /sys/block/mmcblk0/queue/scheduler
-    restorecon /sys/block/mmcblk0/queue/scheduler
 
 on property:adb.network.port=*
     setprop service.adb.tcp.port ${adb.network.port}
